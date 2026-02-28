@@ -20,18 +20,18 @@
 // Bien penser à changer path des textures avant eval
 
 // Below paths for VSCode debug from root repo
-// # define PATH_GROUND "./04_So_Long/textures/ic_Square_Purple.png"
-// # define PATH_WALL "./04_So_Long/textures/ic_Square_Black.png"
-// # define PATH_PLAYER "./04_So_Long/textures/ic_Player_Diplo.png"
-// # define PATH_COLLEC "./04_So_Long/textures/ic_Collectible_Corn.png"
-// # define PATH_ESCAPE "./04_So_Long/textures/ic_Escape_Scooter.png"
+# define PATH_GROUND "./04_So_Long/textures/ic_Square_Purple.png"
+# define PATH_WALL "./04_So_Long/textures/ic_Square_Black.png"
+# define PATH_PLAYER "./04_So_Long/textures/ic_Player_Diplo.png"
+# define PATH_COLLEC "./04_So_Long/textures/ic_Collectible_Corn.png"
+# define PATH_ESCAPE "./04_So_Long/textures/ic_Escape_Scooter.png"
 
 // Below paths for public use w/ matching Makefile
-# define PATH_GROUND "./textures/ic_Square_Purple.png"
-# define PATH_WALL "./textures/ic_Square_Black.png"
-# define PATH_PLAYER "./textures/ic_Player_Diplo.png"
-# define PATH_COLLEC "./textures/ic_Collectible_Corn.png"
-# define PATH_ESCAPE "./textures/ic_Escape_Scooter.png"
+// # define PATH_GROUND "./textures/ic_Square_Purple.png"
+// # define PATH_WALL "./textures/ic_Square_Black.png"
+// # define PATH_PLAYER "./textures/ic_Player_Diplo.png"
+// # define PATH_COLLEC "./textures/ic_Collectible_Corn.png"
+// # define PATH_ESCAPE "./textures/ic_Escape_Scooter.png"
 
 # define RIGHT 6
 # define LEFT 4
