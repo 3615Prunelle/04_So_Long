@@ -1,7 +1,7 @@
 # Public Makefile (l'original a été backup)
-# Si soucis de compil pour l'éval, make sure que l'ordi sur lequel a été cloné mon repo ait ces libs :
-# sudo apt install build-essential libx11-dev libglfw3-dev libglfw3 xorg-dev
-# Bien penser à changer path des textures avant eval
+# Make sure que l'ordi sur lequel a été cloné mon repo ait ces libs :
+# sudo apt install build-essential libx11-dev libglfw3-dev libglfw3 xorg-dev -- Not anymore ? Test ifeq trick below
+# Bien penser à changer path des textures selon l'ordi
 NAME = so_long
 
 CC = cc
@@ -23,6 +23,27 @@ LIBFT_LIB = ./libft/libft.a
 GNL_LIB = ./get_next_line/libgetnextline.a
 
 OBJS = $(SRCS:.c=.o)
+
+# Trick pour vérif libs et les installer si pas trouvées - A tester @home sur WSL
+ifeq ($(shell dpkg -l | grep build-essential), )
+	sudo apt install build-essential
+endif
+
+ifeq ($(shell dpkg -l | grep libx11-dev), )
+	sudo apt install libx11-dev
+endif
+
+ifeq ($(shell dpkg -l | grep libglfw3-dev), )
+	sudo apt install libglfw3-dev
+endif
+
+ifeq ($(shell dpkg -l | grep libglfw3), )
+	sudo apt install libglfw3
+endif
+
+ifeq ($(shell ls /usr/include | grep X11), )
+	sudo apt install xorg-dev
+endif
 
 all: $(NAME)
 
